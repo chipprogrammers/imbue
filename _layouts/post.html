@@ -48,12 +48,12 @@
 <div class="PageNavigation">
   {% if page.previous.url %}
 	<div class="pull-left">
-  <a href="{{ page.previous.url |prepend:site.baseurl }}" class="btn btn-{{ post.card_color }}"><i class="material-icons">keyboard_arrow_left</i> Previous</a>
+  <a href="{{ page.previous.url |prepend:site.baseurl }}" class="btn btn-dark"><i class="material-icons">keyboard_arrow_left</i> Previous</a>
        </div>
   {% endif %}
   {% if page.next.url %}
 	<div class="pull-right">
-	<a href="{{ page.next.url |prepend:site.baseurl }}" class="btn btn-{{ post.card_color }}"><i class="material-icons">keyboard_arrow_right</i> Next</a>
+	<a href="{{ page.next.url |prepend:site.baseurl }}" class="btn btn-dark"><i class="material-icons">keyboard_arrow_right</i> Next</a>
 	</div>
   {% endif %}
 </div>
