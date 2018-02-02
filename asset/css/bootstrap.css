@@ -330,12 +330,28 @@ html {
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 1.42857143;
     color: #333;
     background-color: #fff
 }
+@include media-breakpoint-up(sm) {
+  body {
+    font-size: 1.2rem;
+  }
+}
 
+@include media-breakpoint-up(md) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  body {
+    font-size: 1.6rem;
+  }
+}
 input,
 button,
 select,
