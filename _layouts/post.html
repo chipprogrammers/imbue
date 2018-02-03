@@ -9,31 +9,32 @@
 
 	<!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
 	<div class="main main-raised">
-	<div class="container">
-	<div class="row">
-	<div class="col-sm-8">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
 	{% include back_to_top.html %}
-      {% include content.html %}
-		<i class="fa fa-tags fa-lg" aria-hidden="true"></i><h4 style="display:inline">Posts is tagged on:</h4>
+        {% include content.html %}
+	<i class="fa fa-tags fa-lg" aria-hidden="true"></i><h4 style="display:inline">Posts is tagged on:</h4>
         <ul class="taggs">
-                {% for tag in page.tags %}
-                <li><a href="{{ site.baseurl }}/tags#{{ tag | slugify }}" class="tagg">{{ tag }}</a></li>
+         {% for tag in page.tags %}
+         <li><a href="{{ site.baseurl }}/tags#{{ tag | slugify }}" class="tagg">{{ tag }}</a></li>
       {% endfor %}
      </ul>
 <div class="PageNavigation">
   {% if page.previous.url %}
 	<div class="pull-left">
-  <a href="{{ page.previous.url |prepend:site.baseurl }}" class="btn btn-info"><i class="material-icons">keyboard_arrow_left</i> Previous</a>
-       </div>
+            <a href="{{ page.previous.url |prepend:site.baseurl }}" class="btn btn-info"><i class="material-icons">keyboard_arrow_left</i> Previous</a>
+  	</div>
   {% endif %}
   {% if page.next.url %}
 	<div class="pull-right">
-	<a href="{{ page.next.url |prepend:site.baseurl }}" class="btn btn-info">Next <i class="material-icons">keyboard_arrow_right</i></a>
+	     <a href="{{ page.next.url |prepend:site.baseurl }}" class="btn btn-info">Next <i class="material-icons">keyboard_arrow_right</i></a>
 	</div>
   {% endif %}
    </div>
 </div>
-</br>
+<br />
+<br />
 {% assign hasSimilar = '' %}
 {% for post in site.posts  %}
     {% assign postHasSimilar = false %}
@@ -59,11 +60,11 @@
     {% endfor %}
     {% endfor %}
     {% if hasSimilar.size > 0 %}
-    </ul>
+ </ul>
+	</div>
+</div>
 {% include adsense.html %}
 {% endif %}
-		</div>
-	</div>
 </div>	
 <div class="disqus-comments">
     <div id="disqus_thread"></div>
