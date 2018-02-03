@@ -8,7 +8,7 @@
   {% include hero_header.html %}
 
 	<!-- you can use the class main-raised if you want the main area to be as a page with shadows -->
-	<div class="main main-raised col-sm-6">
+	<div class="main main-raised">
 	<div class="container">
 	{% include back_to_top.html %}
       {% include content.html %}
@@ -25,7 +25,8 @@
         {% for thisTag in page.categories %}
             {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
                 {% if hasSimilar.size == 0 %}
-                <div class="col-sm-6">
+		<aside>				 
+                <div class="panel-body">
                 <h4>Related Posts</h4>
                 <ul class="list-unstyled">
                 {% endif %}
@@ -44,6 +45,7 @@
     {% if hasSimilar.size > 0 %}
     </ul>
   </div>
+	</aside>
 {% endif %}
 <div class="PageNavigation">
   {% if page.previous.url %}
