@@ -19,6 +19,7 @@
                 <li><a href="{{ site.baseurl }}/tags#{{ tag | slugify }}" class="tagg">{{ tag }}</a></li>
       {% endfor %}
         </ul>
+	</div>
 {% assign hasSimilar = '' %}
 {% for post in site.posts  %}
     {% assign postHasSimilar = false %}
@@ -56,7 +57,7 @@
   {% if page.next.url %}
 	<div class="pull-right">
 	<a href="{{ page.next.url |prepend:site.baseurl }}" class="btn btn-info">Next <i class="material-icons">keyboard_arrow_right</i></a>
-	</div>
+	<!-- </div> -->
   {% endif %}
 </div>
 
