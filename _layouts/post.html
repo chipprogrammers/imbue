@@ -18,8 +18,7 @@
                 {% for tag in page.tags %}
                 <li><a href="{{ site.baseurl }}/tags#{{ tag | slugify }}" class="tagg">{{ tag }}</a></li>
       {% endfor %}
-        </ul>
-	</div>
+     </ul>
 <div class="PageNavigation">
   {% if page.previous.url %}
 	<div class="pull-left">
@@ -31,22 +30,8 @@
 	<a href="{{ page.next.url |prepend:site.baseurl }}" class="btn btn-info">Next <i class="material-icons">keyboard_arrow_right</i></a>
 	</div>
   {% endif %}
-<div class="disqus-comments">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* <![CDATA[ */
-        var disqus_shortname = "{{ site.disqus_shortname }}";
-        var disqus_identifier = "{{ site.url }}_{{ page.title }}";
-        var disqus_title = "{{ page.title }}";
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    /* ]]> */
-    </script>
-	</div>
+</div>
+<div class="col-sm-4">
 {% assign hasSimilar = '' %}
 {% for post in site.posts  %}
     {% assign postHasSimilar = false %}
@@ -54,7 +39,7 @@
         {% for thisTag in page.categories %}
             {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
                 {% if hasSimilar.size == 0 %}       			 
-                <div class="panel-body col-sm-4">
+                <div class="panel-body">
                 <h4>Related Posts</h4>
                 <ul class="list-unstyled">
                 {% endif %}
@@ -75,7 +60,23 @@
 {% include adsense.html %}
 </div>
 {% endif %}
-	
+</div>
+<div class="disqus-comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var disqus_shortname = "{{ site.disqus_shortname }}";
+        var disqus_identifier = "{{ site.url }}_{{ page.title }}";
+        var disqus_title = "{{ page.title }}";
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    /* ]]> */
+    </script>
+	</div>
 </div>
 </div>
     {% include footer.html %}
