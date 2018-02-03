@@ -25,9 +25,8 @@
     {% for tag in post.categories %}
         {% for thisTag in page.categories %}
             {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
-                {% if hasSimilar.size == 0 %}
-		<aside class="col-sm-6">				 
-                <div class="panel-body">
+                {% if hasSimilar.size == 0 %}       			 
+                <div class="panel-body col-sm-4">
                 <h4>Related Posts</h4>
                 <ul class="list-unstyled">
                 {% endif %}
@@ -48,7 +47,6 @@
   </div>
 </div>
 {% endif %}
-<div class="col-sm-4">
 <div class="PageNavigation">
   {% if page.previous.url %}
 	<div class="pull-left">
@@ -60,7 +58,6 @@
 	<a href="{{ page.next.url |prepend:site.baseurl }}" class="btn btn-info">Next <i class="material-icons">keyboard_arrow_right</i></a>
 	</div>
   {% endif %}
-</div>
 </div>
 
 <div class="disqus-comments">
