@@ -27,3 +27,7 @@ paginate_path: "/page:num/"
 markdown: kramdown
 highlighter: rouge
 # gems: [jekyll-paginate, jekyll-gist]
+
+#AdSense
+data-ad-client: 2988067515010693
+data-ad-slot: 8512416363
