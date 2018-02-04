@@ -19,6 +19,8 @@
 /* Shadows (from mdl http://www.getmdl.io/) */
 body {
   background-color: #222222;
+  font-family: 'Merriweather', serif;
+  fontweight:500;
 }
 body.inverse {
   background: #333333;
