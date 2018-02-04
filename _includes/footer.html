@@ -2,11 +2,13 @@
 .social [class*="fa fa-"] {
     background-color: #ffffff;
     border-radius: 50px;
+    color: #fff;
     display: inline-block;
     height: 50px;
     line-height: 50px;
     margin: auto 7px;
     width: 50px;
+    font-size: 15px;
     text-align: center;
 }
  </style>
@@ -16,7 +18,7 @@
   <div class="social">
    {% for x in site.data.social %}
    <a target="_blank" href="{{ x.link }}" data-toggle="tooltip" title="{{ x.tooltip }}">
-   <i class="fa fa-{{ x.icon }}" style="color:{{ x.color }}"></i></a>
+   <i class="fa fa-{{ x.icon }} fa-2x" style="color:{{ x.color }}"></i></a>
     {% endfor %}
    </div>
             <div class="container">
