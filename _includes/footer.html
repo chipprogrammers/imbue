@@ -1,9 +1,19 @@
+<style>
+ .fa-social {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+ </style>
 <footer class="panel panel-footer">
  <div class="text-center">
   <h3>Contact Me!</h3>
    {% for x in site.data.social %}
    <a target="_blank" class="btn btn-white btn-fab btn-fab-mini btn-round" href="{{ x.link }}" data-toggle="tooltip" title="{{ x.tooltip }}">
-   <i class="fa fa-{{ x.icon }}" style="color:{{ x.color }}text-align:center;"></i></a>
+   <i class="fa-social fa-{{ x.icon }}" style="color:{{ x.color }}"></i></a>
     {% endfor %}
             <div class="container">
                 <nav>
