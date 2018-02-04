@@ -6,13 +6,14 @@
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
+    background:#ffffff;
 }
  </style>
 <footer class="panel panel-footer">
  <div class="text-center">
   <h3>Contact Me!</h3>
    {% for x in site.data.social %}
-   <a target="_blank" class="btn btn-white btn-fab btn-fab-mini btn-round" href="{{ x.link }}" data-toggle="tooltip" title="{{ x.tooltip }}">
+   <a target="_blank" href="{{ x.link }}" data-toggle="tooltip" title="{{ x.tooltip }}">
    <i class="fa-social fa-{{ x.icon }}" style="color:{{ x.color }}"></i></a>
     {% endfor %}
             <div class="container">
