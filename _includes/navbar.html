@@ -26,7 +26,7 @@
 	    	<ul class="nav navbar-nav navbar-right">
 			{% for y in site.data.navigation %}
 			<li>
-				<a rel="tooltip" title="{{ y.tooltip }}" data-placement="bottom" href="{{ y.url }}" class="btn btn-white btn-simple btn-just-icon">
+				<a data-toggle="tooltip" title="{{ y.tooltip }}" data-placement="bottom" href="{{ y.url }}" class="btn btn-white btn-simple btn-just-icon">
 				<i class="fa {{ y.icon }}"></i>
 				</a>
 			</li>
