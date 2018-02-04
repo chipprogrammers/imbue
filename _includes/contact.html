@@ -5,7 +5,7 @@
     </div>
   <div class="text-center col-md-12 col-lg-8">
    {% for x in site.data.social %}
-   <a target="_blank" href="{{ x.link }}" class="btn btn-neutral btn-icon btn-{{ x.icon }} btn-round btn-lg" rel="tooltip" title="{{ x.tooltip }}">
+   <a target="_blank" href="{{ x.link }}" class="btn btn-neutral btn-icon btn-{{ x.icon }} btn-round btn-lg" data-toggle="tooltip" title="{{ x.tooltip }}">
   <i class="fa fa-{{ x.icon }}" style="color:{{ x.color }}"></i></a>
       {% endfor %}
  </div>
