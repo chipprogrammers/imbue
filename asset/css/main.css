@@ -108,9 +108,9 @@
 #myBtn:hover{background-color:#555;}
 .card .category{color:#999999;text-align:center;font-family:'Ubuntu', sans-serif;margin-bottom:20px;color:orange;font-size:16px;font-weight:bold;}
 /* syntax_highlight.min.css */
-.highlight pre code *{white-space:nowrap;//this sets all children inside to nowrap}
-.highlight pre{overflow-x:auto;//this sets the scrolling in x}
-.highlight pre code{white-space:pre;//forces <code> to respect <pre> formatting}
+.highlight pre code *{white-space:nowrap;}
+.highlight pre{overflow-x:auto;}
+.highlight pre code{white-space:pre;}
 code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}
 pre{display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.42857143;word-break:break-all;word-wrap:break-word;color:#ffffff;}
 pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}
