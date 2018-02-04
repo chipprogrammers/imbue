@@ -1,21 +1,26 @@
 <style>
- .fa-social {
-    padding: 20px;
-    font-size: 30px;
+.social [class*="fa fa-"] {
+    background-color: #333;
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: auto 3px;
     width: 30px;
+    font-size: 15px;
     text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    background:#ffffff;
 }
  </style>
 <footer class="panel panel-footer">
  <div class="text-center">
   <h3>Contact Me!</h3>
+  <div class="social">
    {% for x in site.data.social %}
    <a target="_blank" href="{{ x.link }}" data-toggle="tooltip" title="{{ x.tooltip }}">
-   <i class="fa fa-social fa-{{ x.icon }}" style="color:{{ x.color }}"></i></a>
+   <i class="fa fa-{{ x.icon }}" style="color:{{ x.color }}"></i></a>
     {% endfor %}
+   </div>
             <div class="container">
                 <nav>
                     <ul>
