@@ -99,7 +99,7 @@
 .tagg:hover::after{border-left-color:#32CD32;}
 .figure{padding:0.9em;margin:0 auto 1em;}
 .figure img{margin:0 auto;display:block;max-width:100%;}
-.figure figcaption{padding:5px;font-family:'Ubuntu', sans-serif;font-size:1em;font-weight:300;color:#808080;border:none;display:block;background:transparent;word-wrap:normal;text-align:center;}
+.figure figcaption{padding:5px;font-family:'Merriweather', serif;font-size:1em;font-weight:300;color:#808080;border:none;display:block;background:transparent;word-wrap:normal;text-align:center;}
 .figure-left{float:left;margin:0 1.5em .5em 0;width:-webkit-min-content;width:-moz-min-content;width:min-content;}
 .figure-right{float:right;margin:0 0 .5em 1.5em;width:-webkit-min-content;width:-moz-min-content;width:min-content;}
 .figure-right img,
