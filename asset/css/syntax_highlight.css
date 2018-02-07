@@ -1,13 +1,13 @@
 .highlight pre code * {
-  white-space: nowrap;    // this sets all children inside to nowrap
+  white-space: nowrap; 
   }
 
 .highlight pre {
-  overflow-x: auto;       // this sets the scrolling in x
+  overflow-x: auto; 
 }
 
 .highlight pre code {
-  white-space: pre;       // forces <code> to respect <pre> formatting
+  white-space: pre;
 }
 code {
     padding: 2px 4px;
