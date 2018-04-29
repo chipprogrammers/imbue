@@ -17,6 +17,7 @@ layout: default
         {% endfor %}
     {% endfor %}
     <hr />
+<div class="masonry-container">
     <div class="card-deck">
     <div class="row">
     {% if site.categories[page.categories] %}
@@ -62,6 +63,7 @@ layout: default
     </div>
 </div>
 {% endfor %}
+</div>
     {% else %}
      <p>There are no posts in this categories.</p>
     {% endif %}
@@ -69,3 +71,24 @@ layout: default
     <br />
   </div>
 </div>
+	<!--  Just for demo	 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
+    
+	<script>
+    	
+    	$().ready(function(){
+        	
+        	var $container = $('.masonry-container');
+            doc_width = $(document).width();
+            
+            if (doc_width >= 768){
+                $container.masonry({
+                    itemSelector        : '.card',
+                    columnWidth         : '.card',
+                    transitionDuration  : 0
+                });   
+            } else {
+                $('.mas-container').removeClass('mas-container').addClass('row');
+            }            
+    	});
+	</script>
