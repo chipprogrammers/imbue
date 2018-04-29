@@ -3,6 +3,7 @@ layout: default
 title: Welcome to Our Blog
 ---
   
+<div class="masonry-container">
 <div class="card-deck">
 <div class="row">
 {% for post in paginator.posts %}
@@ -35,7 +36,7 @@ title: Welcome to Our Blog
        {% endfor %}
      </div>
   </div>
-
+</div>
     <!-- Pagination links -->
 <div class="text-center">
     <ul class="pagination pagination-primary flex-wrap">
@@ -84,3 +85,25 @@ title: Welcome to Our Blog
 </ul>
 <!-- end of pagination -->
 </div>
+	<!--  Just for demo	 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.1/masonry.pkgd.min.js"></script>
+    
+	<script>
+    	
+    	$().ready(function(){
+        	
+        	var $container = $('.masonry-container');
+
+            doc_width = $(document).width();
+            
+            if (doc_width >= 768){
+                $container.masonry({
+                    itemSelector        : '.card',
+                    columnWidth         : '.card',
+                    transitionDuration  : 0
+                });   
+            } else {
+                $('.mas-container').removeClass('mas-container').addClass('row');
+            }            
+    	});
+	</script>
